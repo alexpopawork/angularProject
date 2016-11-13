@@ -2,13 +2,13 @@
 
 (function(){
 	
-	angular.module("angularApp", [])
+	angular.module("lunchCheck", [])
 	
-	.controller("firstController", firstController);
+	.controller("lunchController", lunchController);
 	
-	$firstController.$inject = ["$scope"];
+	$lunchController.$inject = ["$scope"];
 	
-	function firstController($scope){
+	function lunchController($scope){
 		$scope.food = "";
 		$scope.message = "";
 		$scope.checkIfTooMuch = function(){
