@@ -5,14 +5,18 @@
 	
 	<style>
 		input{ width: 200px; height: 30px;}
+		.redText{color: red;}
+		.greenText{color: green;}
+		.redBorder{border-color: red;}
+		.greenBorder{border-color: green;}
 	</style>
 	
 </head>
 <body>
-	<div ng-controller="lunchController">
-		<input type="text" ng-model="food" placeholder="Insert the food you have eaten" />
+	<div ng-controller="LunchCheckController">
+		<input type="text" ng-model="food" placeholder="Insert the food you have eaten" ng-class="borderClass" />
 		<br />
-		{{message}}
+		<span ng-class="colorClass">{{message}}</span>
 		<br />
 		<button ng-click="checkIfTooMuch();">Check If Too Much</button> 
 	</div>
