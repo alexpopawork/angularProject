@@ -18,9 +18,12 @@
 				var food = $scope.food.split(",");
 				
 				var goodFoodCounter = 0;
+				var badFoodCounter = 0;
 				for(var i = 0; i < food.length; i++){
 					if(food[i] != ''){
 						goodFoodCounter++;
+					} else {
+						badFoodCounter++;
 					}
 				}
 				
@@ -28,6 +31,9 @@
 					$scope.message = "Too much!";
 				} else {
 					$scope.message = "Enjoy!";
+				}
+				if(badFoodCounter > 0){
+					$scope.message += " (Empty elements are ignored!)"
 				}
 			}
 		}
